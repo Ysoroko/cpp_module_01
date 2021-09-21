@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 10:53:03 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/21 11:15:20 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/21 11:58:03 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	HumanB::attack( void ) const
 	
 }
 
-void HumanB::setWeapon(Weapon new_weapon)
+void HumanB::setWeapon(Weapon &new_weapon)
 {
 	this->_weapon = &new_weapon;
 }

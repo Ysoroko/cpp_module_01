@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 10:43:09 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/21 11:10:32 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/21 11:26:07 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Weapon::~Weapon()
 {
 }
 
-std::string	Weapon::get_type() const
+std::string	const &Weapon::get_type() const
 {
 	return (this->_type);
 }
