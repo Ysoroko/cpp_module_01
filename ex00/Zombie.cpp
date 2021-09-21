@@ -14,12 +14,12 @@
 
 void	Zombie::announce( void ) const
 {
-	std::cout << this->_name << " " << BraiiiiiiinnnzzzZ... << std::endl;
+	std::cout << this->_name << " " << "BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie::Zombie(std::string name) : name(_name)
+Zombie::Zombie(std::string name) : _name(name)
 {
-	announe();
+	announce();
 }
 
 Zombie::~Zombie()

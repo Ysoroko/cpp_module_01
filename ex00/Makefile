@@ -14,7 +14,7 @@
 
 NAME		=	ex00
 
-SRC			=	main.cpp.cpp \
+SRC			=	main.cpp \
 				newZombie.cpp \
 				randomChump.cpp \
 				Zombie.cpp
