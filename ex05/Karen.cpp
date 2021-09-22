@@ -6,16 +6,34 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:47:18 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/22 14:52:30 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/22 16:19:28 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
 
+Karen::Karen()
+{
+
+}
+		
+Karen::~Karen()
+{
+	
+}
+
 // Public
 void	Karen::complain( std::string level )
 {
-
+	void (Karen::*fct[4])() = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
+	std::string	msg[4] = {"debug", "info", "warning", "error"};
+	for (int i = 0; i < 4; i++)
+	{
+		if (msg[i] == level)
+		{
+			*(fct[i]);
+		}
+	}
 }
 
 

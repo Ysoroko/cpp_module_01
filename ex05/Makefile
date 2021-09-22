@@ -6,18 +6,16 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 14:42:15 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/22 14:42:26 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/09/22 16:11:22 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ------------------------------------- VARS ----------------------------------
 
-NAME		=	ex02
+NAME		=	ex05
 
 SRC			=	main.cpp \
-				Weapon.cpp \
-				HumanA.cpp \
-				HumanB.cpp \
+				Karen.cpp \
 
 OBJS		=	$(SRC:.cpp=.o)
 

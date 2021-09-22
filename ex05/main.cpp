@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:43:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/22 14:47:10 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/22 16:15:52 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 int	main(void)
 {
-	
+	Karen	karen;
+
+	karen.complain("debug");
+	karen.complain("info");
+	karen.complain("warning");
+	karen.complain("alert");
 }
