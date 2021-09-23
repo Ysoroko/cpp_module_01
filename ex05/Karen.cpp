@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:47:18 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/23 10:06:20 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/09/23 10:42:58 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ void	Karen::error( void )
 // Public
 void	Karen::complain( std::string level )
 {
-	void (*fct[4])() = { debug, info, warning, error } ;
+	void	(Karen::*fct[4])(void) = { &Karen::debug, &Karen::info, &Karen::warning, &Karen::error };
 	//void (*fct[4])() = {&(Karen::debug()), info(), warning(), error()};
-	std::string	msg[4] = {"debug", "info", "warning", "alert"};
+	std::string	msg[4] = {"debug", "info", "warning", "error"};
 	for (int i = 0; i < 4; i++)
 	{
 		if (msg[i] == level)
 		{
-			fct[i]();
+			(this->*(fct[i]))();
 		}
 	}
 }
