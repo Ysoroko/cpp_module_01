@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 14:43:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/23 10:49:55 by ysoroko          ###   ########.fr       */
+/*   Created: 2021/09/22 14:43:13 by ysoroko           #+#    #+#             */
+/*   Updated: 2021/09/23 10:30:12 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
-int	main(void)
+# include <iostream>
+
+class Karen
 {
-	Karen	karen;
+	typedef  void (Karen::*MemberFunction)(void);
+	#define CALL_MEMBER_FN(object, ptrToMember) ((object).*(ptrToMember))
 
-	karen.complain("debug");
-	karen.complain("not a message");
-	karen.complain("info");
-	karen.complain("warning");
-	karen.complain("error");
-	return (0);
-}
+	public:
+		Karen();
+		~Karen();
+		void complain( std::string level );
+
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+};
+
+#endif
