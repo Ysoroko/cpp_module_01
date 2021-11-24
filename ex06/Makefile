@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/23 10:48:21 by ysoroko           #+#    #+#              #
-#    Updated: 2021/09/23 10:49:07 by ysoroko          ###   ########.fr        #
+#    Updated: 2021/11/24 13:55:16 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,3 +44,11 @@ re:	fclean all
 	${COMPILE} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 .PHONY:	all clean fclean re
+
+# ------------------------------------- TESTS ----------------------------------
+
+test1: $(NAME)
+	./$(EXEC) "WARNING"
+
+test2: $(NAME)
+	./$(EXEC) "I am not sure how tired I am today..."
