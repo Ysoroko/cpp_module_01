@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 10:19:35 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/21 10:26:26 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/24 13:37:00 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(void)
 	
 	std::cout << "Address of the string: " << std::endl;
 	std::cout << "----------------------" << std::endl;
+	std::cout << "via string address: " << &str << std::endl;
 	std::cout << "via stringPTR: " << stringPTR << std::endl;
 	std::cout << "via stringREF: " << &stringREF << std::endl;
 
@@ -38,6 +39,7 @@ int main(void)
 
 	std::cout << "Value of the string: " << std::endl;
 	std::cout << "----------------------" << std::endl;
+	std::cout << "via string itself: " << str << std::endl;
 	std::cout << "via stringPTR: " << *stringPTR << std::endl;
 	std::cout << "via stringREF: " << stringREF << std::endl;
 	
