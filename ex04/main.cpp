@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:08:02 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/09/22 14:27:22 by ysoroko          ###   ########.fr       */
+/*   Updated: 2021/11/25 13:56:10 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,9 @@ int	main(int argc, char **argv)
 	while (getline(ifs, line_read))
 	{
 		ft_replace(&line_read, to_replace, replace_with);
-		ofs << line_read << std::endl;
+		// Not add \n at the end of the file
+		if (!std::cin.eof())
+			ofs << line_read << std::endl;
 	}
 	ofs.close();
 	ifs.close();
